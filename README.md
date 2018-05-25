@@ -1,4 +1,4 @@
-Redmine Workflow API
+Redmine Auditlog
 -------
 
 Provides full auditlog for user actions in Redmine instance.

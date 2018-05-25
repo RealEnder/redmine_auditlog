@@ -41,7 +41,7 @@ Redmine::Plugin.register :redmine_auditlog do
     Message.send(:include, RedmineAuditlog::AuditlogPatch)
     News.send(:include, RedmineAuditlog::AuditlogPatch)
     Project.send(:include, RedmineAuditlog::AuditlogPatch)
-    Repository.send(:include, RedmineAuditlog::AuditlogPatch)
+    Repository.send(:include, RedmineAuditlog::AuditlogPatchRepository)
     Role.send(:include, RedmineAuditlog::AuditlogPatch)
     Setting.send(:include, RedmineAuditlog::AuditlogPatch)
     TimeEntry.send(:include, RedmineAuditlog::AuditlogPatch)

@@ -23,7 +23,7 @@ Redmine::Plugin.register :redmine_auditlog do
     Document.send(:include, RedmineAuditlog::AuditlogPatch)
     EmailAddress.send(:include, RedmineAuditlog::AuditlogPatch)
     EnabledModule.send(:include, RedmineAuditlog::AuditlogPatch)
-    Enumeration.send(:include, RedmineAuditlog::AuditlogPatch)
+    #Enumeration.send(:include, RedmineAuditlog::AuditlogPatch)
     Group.send(:include, RedmineAuditlog::AuditlogPatch)
     Import.send(:include, RedmineAuditlog::AuditlogPatch)
     ImportItem.send(:include, RedmineAuditlog::AuditlogPatch)

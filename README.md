@@ -20,6 +20,16 @@ How to use
 ```
 Then restart Redmine.
 
+How to remove
+-------
+```
+  $ cd /path/to/redmine
+  $ rake redmine:plugins:migrate NAME=redmine_auditlog VERSION=0 RAILS_ENV=production
+  $ rm -rf plugins/redmine_auditlog
+```
+Then restart Redmine.
+
+
 Compatible with:	Redmine 3.4.x, 3.3.x, 3.2.x, 3.1.x, 3.0.x  
 Tested with Redmine 3.4.6
 

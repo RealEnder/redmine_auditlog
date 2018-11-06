@@ -4,7 +4,7 @@ Redmine::Plugin.register :redmine_auditlog do
   name 'Redmine Auditlog'
   author 'Alex Stanev'
   description 'Provides full auditlog for user actions in Redmine instance.' 
-  version '0.0.2'
+  version '0.0.3'
   url 'https://github.com/RealEnder/redmine_auditlog'
   author_url 'https://www.stanev.org'
   requires_redmine :version_or_higher => '3.0.0'

@@ -14,7 +14,6 @@ Redmine::Plugin.register :redmine_auditlog do
     Attachment.send(:include, RedmineAuditlog::AuditlogPatch)
     AuthSource.send(:include, RedmineAuditlog::AuditlogPatchAuthSource)
     Board.send(:include, RedmineAuditlog::AuditlogPatch)
-    Change.send(:include, RedmineAuditlog::AuditlogPatch)
     #Changeset.send(:include, RedmineAuditlog::AuditlogPatch)
     Comment.send(:include, RedmineAuditlog::AuditlogPatch)
     CustomField.send(:include, RedmineAuditlog::AuditlogPatch)

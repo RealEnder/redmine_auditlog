@@ -35,7 +35,7 @@ Tested with Redmine 3.4.6, 4.1.1
 
 License
 -------
-Copyright 2018 Alex Stanev <alex@stanev.org>  
+Copyright 2018-2020 Alex Stanev <alex@stanev.org>  
 This plugin is released under the GPL v3 license. See  
 LICENSE for more information.
 

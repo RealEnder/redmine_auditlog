@@ -21,7 +21,6 @@ Redmine::Plugin.register :redmine_auditlog do
     Document.send(:include, RedmineAuditlog::AuditlogPatch)
     EmailAddress.send(:include, RedmineAuditlog::AuditlogPatch)
     EnabledModule.send(:include, RedmineAuditlog::AuditlogPatch)
-    Group.send(:include, RedmineAuditlog::AuditlogPatch)
     Import.send(:include, RedmineAuditlog::AuditlogPatch)
     ImportItem.send(:include, RedmineAuditlog::AuditlogPatch)
     Issue.send(:include, RedmineAuditlog::AuditlogPatch)
@@ -44,7 +43,6 @@ Redmine::Plugin.register :redmine_auditlog do
     TimeEntry.send(:include, RedmineAuditlog::AuditlogPatch)
     Token.send(:include, RedmineAuditlog::AuditlogPatchToken)
     Tracker.send(:include, RedmineAuditlog::AuditlogPatch)
-    User.send(:include, RedmineAuditlog::AuditlogPatchUser)
     UserPreference.send(:include, RedmineAuditlog::AuditlogPatch)
     Version.send(:include, RedmineAuditlog::AuditlogPatch)
     Watcher.send(:include, RedmineAuditlog::AuditlogPatch)
@@ -55,5 +53,10 @@ Redmine::Plugin.register :redmine_auditlog do
     WorkflowPermission.send(:include, RedmineAuditlog::AuditlogPatch)
     WorkflowRule.send(:include, RedmineAuditlog::AuditlogPatch)
     WorkflowTransition.send(:include, RedmineAuditlog::AuditlogPatch)
+
+    if Redmine::VERSION::MAJOR < 4
+      User.send(:include, RedmineAuditlog::AuditlogPatchUser)
+      Group.send(:include, RedmineAuditlog::AuditlogPatch)
+    end
   end
 end

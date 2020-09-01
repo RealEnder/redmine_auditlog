@@ -14,7 +14,7 @@ How to use
   $ cd /path/to/redmine/plugins
   $ git clone https://github.com/RealEnder/redmine_auditlog
   $ cd redmine_auditlog
-  $ rails generate audited:install --audited-changes-column-type jsonb # This is for more efficient PostgreSQL storage
+  $ rails generate audited:install # If using PostgreSQL, add "--audited-changes-column-type jsonb" for more efficient storage
   $ cd ../..
   $ rake db:migrate RAILS_ENV="production"
 ```

@@ -3,10 +3,6 @@ Redmine Auditlog
 
 Provides full auditlog for user actions in Redmine instance.
 
-### Warning
-
-Under Redmine 4.x User and Group objects are not currently audited!
-
 
 How to use
 -------

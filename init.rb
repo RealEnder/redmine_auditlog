@@ -54,9 +54,12 @@ Redmine::Plugin.register :redmine_auditlog do
     WorkflowRule.send(:include, RedmineAuditlog::AuditlogPatch)
     WorkflowTransition.send(:include, RedmineAuditlog::AuditlogPatch)
 
-    if Redmine::VERSION::MAJOR < 4
-      User.send(:include, RedmineAuditlog::AuditlogPatchUser)
-      Group.send(:include, RedmineAuditlog::AuditlogPatch)
-    end
+    AnonymousUser.send(:include, RedmineAuditlog::AuditlogPatchUser)
+    User.send(:include, RedmineAuditlog::AuditlogPatchUser)
+
+    GroupNonMember.send(:include, RedmineAuditlog::AuditlogPatch)
+    GroupAnonymous.send(:include, RedmineAuditlog::AuditlogPatch)
+    GroupBuiltin.send(:include, RedmineAuditlog::AuditlogPatch)
+    Group.send(:include, RedmineAuditlog::AuditlogPatch)
   end
 end

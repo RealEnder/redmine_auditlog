@@ -15,6 +15,7 @@ Redmine::Plugin.register :redmine_auditlog do
     AuthSource.send(:include, RedmineAuditlog::AuditlogPatchAuthSource)
     Board.send(:include, RedmineAuditlog::AuditlogPatch)
     Comment.send(:include, RedmineAuditlog::AuditlogPatch)
+    IssueCustomField.send(:include, RedmineAuditlog::AuditlogPatch)
     CustomField.send(:include, RedmineAuditlog::AuditlogPatch)
     CustomFieldEnumeration.send(:include, RedmineAuditlog::AuditlogPatch)
     CustomValue.send(:include, RedmineAuditlog::AuditlogPatch)
@@ -25,7 +26,6 @@ Redmine::Plugin.register :redmine_auditlog do
     ImportItem.send(:include, RedmineAuditlog::AuditlogPatch)
     Issue.send(:include, RedmineAuditlog::AuditlogPatch)
     IssueCategory.send(:include, RedmineAuditlog::AuditlogPatch)
-    IssueCustomField.send(:include, RedmineAuditlog::AuditlogPatch)
     IssueImport.send(:include, RedmineAuditlog::AuditlogPatch)
     IssuePriority.send(:include, RedmineAuditlog::AuditlogPatch)
     IssueRelation.send(:include, RedmineAuditlog::AuditlogPatch)
@@ -37,6 +37,7 @@ Redmine::Plugin.register :redmine_auditlog do
     Message.send(:include, RedmineAuditlog::AuditlogPatch)
     News.send(:include, RedmineAuditlog::AuditlogPatch)
     Project.send(:include, RedmineAuditlog::AuditlogPatch)
+    Repository::Mercurial.send(:include, RedmineAuditlog::AuditlogPatchRepository) rescue nil
     Repository.send(:include, RedmineAuditlog::AuditlogPatchRepository)
     Role.send(:include, RedmineAuditlog::AuditlogPatch)
     Setting.send(:include, RedmineAuditlog::AuditlogPatch)

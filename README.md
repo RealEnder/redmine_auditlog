@@ -23,15 +23,15 @@ How to remove
   $ rake redmine:plugins:migrate NAME=redmine_auditlog VERSION=0 RAILS_ENV=production
   $ rm -rf plugins/redmine_auditlog
 ```
-Then restart Redmine. This will not remove audit table.
+Then restart Redmine. This will not remove the `audits` table.
 
 
-Compatible with:	Redmine 3.4.x, 3.3.x, 3.2.x, 3.1.x, 3.0.x, 4.0.x, 4.1.x  
-Tested with Redmine 3.4.6, 4.1.1
+Compatible with:	Redmine 3.4.x, 3.3.x, 3.2.x, 3.1.x, 3.0.x, 4.0.x, 4.1.x , 4.2.x   
+Tested with Redmine 3.4.6, 4.1.1, 4.2.10
 
 License
 -------
-Copyright 2018-2020 Alex Stanev <alex@stanev.org>  
-This plugin is released under the GPL v3 license. See  
+Copyright 2018-2023 Alex Stanev <alex@stanev.org>   
+This plugin is released under the GPL v3 license. See   
 LICENSE for more information.
 
